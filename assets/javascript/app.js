@@ -22,7 +22,6 @@ var intervalId;
 function signUp(){
 	var newemail = $("#newuseremail").val();
 	var newpassword = $("#newpassword").val();
-	console.log("newemail, newpassword: "+ newemail, newpassword);
 	firebase.auth().createUserWithEmailAndPassword(newemail, newpassword).catch(function(error) {
 		if (!error) {
 			alert("Please login with the username and password created");
@@ -70,7 +69,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 //==============================================
 function signOut(){
 	firebase.auth().signOut().then(function() {
-		console.log('Signed Out');
 		$("#mainSection").hide();
 		$("#logInUser").show();
 		$("#signUp").hide();
