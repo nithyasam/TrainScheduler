@@ -17,3 +17,12 @@ body{
 .removeBtn,.updateBtn,#logout{
 	width: 100%;
 }
+.removeBtn:hover{
+	background-color: red;
+}
+.updateBtn:hover{
+	background-color: green;
+}
+#logout:hover{
+	background-color: black;
+}
